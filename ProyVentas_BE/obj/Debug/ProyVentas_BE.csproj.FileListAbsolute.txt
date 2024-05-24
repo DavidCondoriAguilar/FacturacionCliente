@@ -1,0 +1,6 @@
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_BE\bin\Debug\ProyVentas_BE.dll
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_BE\bin\Debug\ProyVentas_BE.pdb
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_BE\obj\Debug\ProyVentas_BE.csproj.AssemblyReference.cache
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_BE\obj\Debug\ProyVentas_BE.csproj.CoreCompileInputs.cache
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_BE\obj\Debug\ProyVentas_BE.dll
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_BE\obj\Debug\ProyVentas_BE.pdb

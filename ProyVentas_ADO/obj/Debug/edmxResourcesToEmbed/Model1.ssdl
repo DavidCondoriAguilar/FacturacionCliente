@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VentasLeonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Tb_Abastecimiento">
+    <Key>
+      <PropertyRef Name="Cod_prv" />
+      <PropertyRef Name="Cod_pro" />
+    </Key>
+    <Property Name="Cod_prv" Type="nchar" MaxLength="4" Nullable="false" />
+    <Property Name="Cod_pro" Type="nchar" MaxLength="4" Nullable="false" />
+    <Property Name="Pre_Aba" Type="real" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Categoria">
+    <Key>
+      <PropertyRef Name="Id_Cat" />
+    </Key>
+    <Property Name="Id_Cat" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Des_Cat" Type="varchar" MaxLength="50" />
+    <Property Name="Foto_Cat" Type="image" />
+  </EntityType>
+  <EntityType Name="Tb_Cliente">
+    <Key>
+      <PropertyRef Name="Cod_cli" />
+    </Key>
+    <Property Name="Cod_cli" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="Raz_soc_cli" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Dir_cli" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tel_cli" Type="nvarchar" MaxLength="10" />
+    <Property Name="Ruc_cli" Type="nchar" MaxLength="11" Nullable="false" />
+    <Property Name="Id_Ubigeo" Type="nchar" MaxLength="6" />
+    <Property Name="Tip_cli" Type="int" Nullable="false" />
+    <Property Name="Contacto" Type="nvarchar" MaxLength="30" />
+    <Property Name="Fec_reg" Type="datetime" Nullable="false" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+    <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+    <Property Name="Est_cli" Type="int" />
+  </EntityType>
+  <EntityType Name="Tb_Detalle_Compra">
+    <Key>
+      <PropertyRef Name="Num_oco" />
+      <PropertyRef Name="Cod_pro" />
+    </Key>
+    <Property Name="Num_oco" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="Cod_pro" Type="nchar" MaxLength="4" Nullable="false" />
+    <Property Name="Can_ped" Type="int" />
+  </EntityType>
+  <EntityType Name="Tb_Detalle_Factura">
+    <Key>
+      <PropertyRef Name="Num_fac" />
+      <PropertyRef Name="Cod_pro" />
+    </Key>
+    <Property Name="Num_fac" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="Cod_pro" Type="nchar" MaxLength="4" Nullable="false" />
+    <Property Name="Can_ven" Type="int" Nullable="false" />
+    <Property Name="Pre_ven" Type="real" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Factura">
+    <Key>
+      <PropertyRef Name="Num_fac" />
+    </Key>
+    <Property Name="Num_fac" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="Fec_fac" Type="datetime" Nullable="false" />
+    <Property Name="Cod_cli" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="Fec_can" Type="datetime" />
+    <Property Name="Est_fac" Type="int" />
+    <Property Name="Cod_ven" Type="nchar" MaxLength="3" />
+    <Property Name="Por_Igv" Type="money" Nullable="false" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+    <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Tb_Orden_Compra">
+    <Key>
+      <PropertyRef Name="Num_oco" />
+    </Key>
+    <Property Name="Num_oco" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="Fec_oco" Type="datetime" Nullable="false" />
+    <Property Name="Cod_prv" Type="nchar" MaxLength="4" Nullable="false" />
+    <Property Name="Fec_ate" Type="datetime" />
+    <Property Name="Est_oco" Type="int" Nullable="false" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+    <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Tb_Producto">
+    <Key>
+      <PropertyRef Name="Cod_pro" />
+    </Key>
+    <Property Name="Cod_pro" Type="nchar" MaxLength="4" Nullable="false" />
+    <Property Name="Des_pro" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pre_pro" Type="money" />
+    <Property Name="Stk_act" Type="int" />
+    <Property Name="Stk_min" Type="int" />
+    <Property Name="Id_UM" Type="int" />
+    <Property Name="Id_Cat" Type="int" />
+    <Property Name="Importado" Type="int" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="nvarchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+    <Property Name="Usu_Ult_Mod" Type="nvarchar" MaxLength="20" />
+    <Property Name="Est_pro" Type="int" />
+  </EntityType>
+  <EntityType Name="Tb_Proveedor">
+    <Key>
+      <PropertyRef Name="Cod_prv" />
+    </Key>
+    <Property Name="Cod_prv" Type="nchar" MaxLength="4" Nullable="false" />
+    <Property Name="Raz_soc_prv" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Dir_prv" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tel_prv" Type="nvarchar" MaxLength="10" />
+    <Property Name="Ruc_Prv" Type="nchar" MaxLength="11" Nullable="false" />
+    <Property Name="Rep_ven" Type="nvarchar" MaxLength="30" />
+    <Property Name="Id_Ubigeo" Type="nchar" MaxLength="6" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+    <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+    <Property Name="Est_prv" Type="int" />
+  </EntityType>
+  <EntityType Name="Tb_RepositorioDocumentos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ruta" Type="varchar" MaxLength="100" />
+    <Property Name="FecRegistro" Type="smalldatetime" />
+    <Property Name="UsuRegistro" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Tb_Ubigeo">
+    <Key>
+      <PropertyRef Name="Id_Ubigeo" />
+    </Key>
+    <Property Name="Id_Ubigeo" Type="nchar" MaxLength="6" Nullable="false" />
+    <Property Name="IdDepa" Type="nvarchar" MaxLength="255" />
+    <Property Name="IdProv" Type="nvarchar" MaxLength="255" />
+    <Property Name="IdDist" Type="nvarchar" MaxLength="255" />
+    <Property Name="Departamento" Type="nvarchar" MaxLength="255" />
+    <Property Name="Provincia" Type="nvarchar" MaxLength="255" />
+    <Property Name="Distrito" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cod_Ven" Type="nchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="Tb_UnidadMedida">
+    <Key>
+      <PropertyRef Name="Id_UM" />
+    </Key>
+    <Property Name="Id_UM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Des_UM" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tb_Usuario">
+    <Key>
+      <PropertyRef Name="Login_Usuario" />
+    </Key>
+    <Property Name="Login_Usuario" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Pass_Usuario" Type="varchar" MaxLength="20" />
+    <Property Name="Niv_Usuario" Type="int" />
+    <Property Name="Est_Usuario" Type="int" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Tb_Vendedor">
+    <Key>
+      <PropertyRef Name="Cod_ven" />
+    </Key>
+    <Property Name="Cod_ven" Type="nchar" MaxLength="3" Nullable="false" />
+    <Property Name="Nom_ven" Type="nvarchar" MaxLength="25" />
+    <Property Name="Ape_ven" Type="nvarchar" MaxLength="25" />
+    <Property Name="Sue_ven" Type="money" />
+    <Property Name="Fec_ing" Type="datetime" />
+    <Property Name="Tip_ven" Type="int" />
+    <Property Name="Dni_ven" Type="nchar" MaxLength="8" />
+    <Property Name="Email_ven" Type="varchar" MaxLength="50" />
+    <Property Name="Cod_Supervisor" Type="nchar" MaxLength="3" />
+    <Property Name="Fec_Registro" Type="datetime" />
+    <Property Name="Usu_Registro" Type="varchar" MaxLength="20" />
+    <Property Name="Fec_Ult_Mod" Type="datetime" />
+    <Property Name="Usu_Ult_Mod" Type="varchar" MaxLength="20" />
+    <Property Name="Est_ven" Type="int" />
+  </EntityType>
+  <Association Name="FK__Tb_Abaste__Cod_p__398D8EEE">
+    <End Role="Tb_Producto" Type="Self.Tb_Producto" Multiplicity="1" />
+    <End Role="Tb_Abastecimiento" Type="Self.Tb_Abastecimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Producto">
+        <PropertyRef Name="Cod_pro" />
+      </Principal>
+      <Dependent Role="Tb_Abastecimiento">
+        <PropertyRef Name="Cod_pro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Detall__Cod_p__3C69FB99">
+    <End Role="Tb_Producto" Type="Self.Tb_Producto" Multiplicity="1" />
+    <End Role="Tb_Detalle_Compra" Type="Self.Tb_Detalle_Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Producto">
+        <PropertyRef Name="Cod_pro" />
+      </Principal>
+      <Dependent Role="Tb_Detalle_Compra">
+        <PropertyRef Name="Cod_pro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Detall__Cod_p__3E52440B">
+    <End Role="Tb_Producto" Type="Self.Tb_Producto" Multiplicity="1" />
+    <End Role="Tb_Detalle_Factura" Type="Self.Tb_Detalle_Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Producto">
+        <PropertyRef Name="Cod_pro" />
+      </Principal>
+      <Dependent Role="Tb_Detalle_Factura">
+        <PropertyRef Name="Cod_pro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Detall__Num_f__3F466844">
+    <End Role="Tb_Factura" Type="Self.Tb_Factura" Multiplicity="1" />
+    <End Role="Tb_Detalle_Factura" Type="Self.Tb_Detalle_Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Factura">
+        <PropertyRef Name="Num_fac" />
+      </Principal>
+      <Dependent Role="Tb_Detalle_Factura">
+        <PropertyRef Name="Num_fac" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Detall__Num_o__3D5E1FD2">
+    <End Role="Tb_Orden_Compra" Type="Self.Tb_Orden_Compra" Multiplicity="1" />
+    <End Role="Tb_Detalle_Compra" Type="Self.Tb_Detalle_Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Orden_Compra">
+        <PropertyRef Name="Num_oco" />
+      </Principal>
+      <Dependent Role="Tb_Detalle_Compra">
+        <PropertyRef Name="Num_oco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Factur__Cod_c__412EB0B6">
+    <End Role="Tb_Cliente" Type="Self.Tb_Cliente" Multiplicity="1" />
+    <End Role="Tb_Factura" Type="Self.Tb_Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Cliente">
+        <PropertyRef Name="Cod_cli" />
+      </Principal>
+      <Dependent Role="Tb_Factura">
+        <PropertyRef Name="Cod_cli" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Reposi__UsuRe__51700577">
+    <End Role="Tb_Usuario" Type="Self.Tb_Usuario" Multiplicity="0..1" />
+    <End Role="Tb_RepositorioDocumentos" Type="Self.Tb_RepositorioDocumentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuario">
+        <PropertyRef Name="Login_Usuario" />
+      </Principal>
+      <Dependent Role="Tb_RepositorioDocumentos">
+        <PropertyRef Name="UsuRegistro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Vended__Cod_S__6A70BD6B">
+    <End Role="Tb_Vendedor" Type="Self.Tb_Vendedor" Multiplicity="0..1" />
+    <End Role="Tb_Vendedor1" Type="Self.Tb_Vendedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Vendedor">
+        <PropertyRef Name="Cod_ven" />
+      </Principal>
+      <Dependent Role="Tb_Vendedor1">
+        <PropertyRef Name="Cod_Supervisor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_cod_ven">
+    <End Role="Tb_Vendedor" Type="Self.Tb_Vendedor" Multiplicity="0..1" />
+    <End Role="Tb_Factura" Type="Self.Tb_Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Vendedor">
+        <PropertyRef Name="Cod_ven" />
+      </Principal>
+      <Dependent Role="Tb_Factura">
+        <PropertyRef Name="Cod_ven" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Abastecimiento_Tb_Proveedor">
+    <End Role="Tb_Proveedor" Type="Self.Tb_Proveedor" Multiplicity="1" />
+    <End Role="Tb_Abastecimiento" Type="Self.Tb_Abastecimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Proveedor">
+        <PropertyRef Name="Cod_prv" />
+      </Principal>
+      <Dependent Role="Tb_Abastecimiento">
+        <PropertyRef Name="Cod_prv" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Cliente_Tb_Ubigeo">
+    <End Role="Tb_Ubigeo" Type="Self.Tb_Ubigeo" Multiplicity="0..1" />
+    <End Role="Tb_Cliente" Type="Self.Tb_Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Ubigeo">
+        <PropertyRef Name="Id_Ubigeo" />
+      </Principal>
+      <Dependent Role="Tb_Cliente">
+        <PropertyRef Name="Id_Ubigeo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Orden_Compra_Tb_Proveedor">
+    <End Role="Tb_Proveedor" Type="Self.Tb_Proveedor" Multiplicity="1" />
+    <End Role="Tb_Orden_Compra" Type="Self.Tb_Orden_Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Proveedor">
+        <PropertyRef Name="Cod_prv" />
+      </Principal>
+      <Dependent Role="Tb_Orden_Compra">
+        <PropertyRef Name="Cod_prv" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Producto_Tb_Categoria">
+    <End Role="Tb_Categoria" Type="Self.Tb_Categoria" Multiplicity="0..1" />
+    <End Role="Tb_Producto" Type="Self.Tb_Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Categoria">
+        <PropertyRef Name="Id_Cat" />
+      </Principal>
+      <Dependent Role="Tb_Producto">
+        <PropertyRef Name="Id_Cat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Producto_Tb_UnidadMedida">
+    <End Role="Tb_UnidadMedida" Type="Self.Tb_UnidadMedida" Multiplicity="0..1" />
+    <End Role="Tb_Producto" Type="Self.Tb_Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_UnidadMedida">
+        <PropertyRef Name="Id_UM" />
+      </Principal>
+      <Dependent Role="Tb_Producto">
+        <PropertyRef Name="Id_UM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Proveedor_Tb_Ubigeo">
+    <End Role="Tb_Ubigeo" Type="Self.Tb_Ubigeo" Multiplicity="0..1" />
+    <End Role="Tb_Proveedor" Type="Self.Tb_Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Ubigeo">
+        <PropertyRef Name="Id_Ubigeo" />
+      </Principal>
+      <Dependent Role="Tb_Proveedor">
+        <PropertyRef Name="Id_Ubigeo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_Ubigeo_Tb_Vendedor">
+    <End Role="Tb_Vendedor" Type="Self.Tb_Vendedor" Multiplicity="0..1" />
+    <End Role="Tb_Ubigeo" Type="Self.Tb_Ubigeo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Vendedor">
+        <PropertyRef Name="Cod_ven" />
+      </Principal>
+      <Dependent Role="Tb_Ubigeo">
+        <PropertyRef Name="Cod_Ven" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="usp_DeudaCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vcod" Type="char" Mode="In" />
+    <Parameter Name="vdeuda" Type="money" Mode="InOut" />
+  </Function>
+  <Function Name="usp_ListarFacturasVendedorFechas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codven" Type="char" Mode="In" />
+    <Parameter Name="fecini" Type="smalldatetime" Mode="In" />
+    <Parameter Name="fecfin" Type="smalldatetime" Mode="In" />
+  </Function>
+  <Function Name="usp_ListarNombresVendedor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="VentasLeonModelStoreContainer">
+    <EntitySet Name="Tb_Abastecimiento" EntityType="Self.Tb_Abastecimiento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Categoria" EntityType="Self.Tb_Categoria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Cliente" EntityType="Self.Tb_Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Detalle_Compra" EntityType="Self.Tb_Detalle_Compra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Detalle_Factura" EntityType="Self.Tb_Detalle_Factura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Factura" EntityType="Self.Tb_Factura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Orden_Compra" EntityType="Self.Tb_Orden_Compra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Producto" EntityType="Self.Tb_Producto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Proveedor" EntityType="Self.Tb_Proveedor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_RepositorioDocumentos" EntityType="Self.Tb_RepositorioDocumentos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Ubigeo" EntityType="Self.Tb_Ubigeo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_UnidadMedida" EntityType="Self.Tb_UnidadMedida" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Usuario" EntityType="Self.Tb_Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Vendedor" EntityType="Self.Tb_Vendedor" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Tb_Abaste__Cod_p__398D8EEE" Association="Self.FK__Tb_Abaste__Cod_p__398D8EEE">
+      <End Role="Tb_Producto" EntitySet="Tb_Producto" />
+      <End Role="Tb_Abastecimiento" EntitySet="Tb_Abastecimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Detall__Cod_p__3C69FB99" Association="Self.FK__Tb_Detall__Cod_p__3C69FB99">
+      <End Role="Tb_Producto" EntitySet="Tb_Producto" />
+      <End Role="Tb_Detalle_Compra" EntitySet="Tb_Detalle_Compra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Detall__Cod_p__3E52440B" Association="Self.FK__Tb_Detall__Cod_p__3E52440B">
+      <End Role="Tb_Producto" EntitySet="Tb_Producto" />
+      <End Role="Tb_Detalle_Factura" EntitySet="Tb_Detalle_Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Detall__Num_f__3F466844" Association="Self.FK__Tb_Detall__Num_f__3F466844">
+      <End Role="Tb_Factura" EntitySet="Tb_Factura" />
+      <End Role="Tb_Detalle_Factura" EntitySet="Tb_Detalle_Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Detall__Num_o__3D5E1FD2" Association="Self.FK__Tb_Detall__Num_o__3D5E1FD2">
+      <End Role="Tb_Orden_Compra" EntitySet="Tb_Orden_Compra" />
+      <End Role="Tb_Detalle_Compra" EntitySet="Tb_Detalle_Compra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Factur__Cod_c__412EB0B6" Association="Self.FK__Tb_Factur__Cod_c__412EB0B6">
+      <End Role="Tb_Cliente" EntitySet="Tb_Cliente" />
+      <End Role="Tb_Factura" EntitySet="Tb_Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Reposi__UsuRe__51700577" Association="Self.FK__Tb_Reposi__UsuRe__51700577">
+      <End Role="Tb_Usuario" EntitySet="Tb_Usuario" />
+      <End Role="Tb_RepositorioDocumentos" EntitySet="Tb_RepositorioDocumentos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Vended__Cod_S__6A70BD6B" Association="Self.FK__Tb_Vended__Cod_S__6A70BD6B">
+      <End Role="Tb_Vendedor" EntitySet="Tb_Vendedor" />
+      <End Role="Tb_Vendedor1" EntitySet="Tb_Vendedor" />
+    </AssociationSet>
+    <AssociationSet Name="fk_cod_ven" Association="Self.fk_cod_ven">
+      <End Role="Tb_Vendedor" EntitySet="Tb_Vendedor" />
+      <End Role="Tb_Factura" EntitySet="Tb_Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Abastecimiento_Tb_Proveedor" Association="Self.FK_Tb_Abastecimiento_Tb_Proveedor">
+      <End Role="Tb_Proveedor" EntitySet="Tb_Proveedor" />
+      <End Role="Tb_Abastecimiento" EntitySet="Tb_Abastecimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Cliente_Tb_Ubigeo" Association="Self.FK_Tb_Cliente_Tb_Ubigeo">
+      <End Role="Tb_Ubigeo" EntitySet="Tb_Ubigeo" />
+      <End Role="Tb_Cliente" EntitySet="Tb_Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Orden_Compra_Tb_Proveedor" Association="Self.FK_Tb_Orden_Compra_Tb_Proveedor">
+      <End Role="Tb_Proveedor" EntitySet="Tb_Proveedor" />
+      <End Role="Tb_Orden_Compra" EntitySet="Tb_Orden_Compra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Producto_Tb_Categoria" Association="Self.FK_Tb_Producto_Tb_Categoria">
+      <End Role="Tb_Categoria" EntitySet="Tb_Categoria" />
+      <End Role="Tb_Producto" EntitySet="Tb_Producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Producto_Tb_UnidadMedida" Association="Self.FK_Tb_Producto_Tb_UnidadMedida">
+      <End Role="Tb_UnidadMedida" EntitySet="Tb_UnidadMedida" />
+      <End Role="Tb_Producto" EntitySet="Tb_Producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Proveedor_Tb_Ubigeo" Association="Self.FK_Tb_Proveedor_Tb_Ubigeo">
+      <End Role="Tb_Ubigeo" EntitySet="Tb_Ubigeo" />
+      <End Role="Tb_Proveedor" EntitySet="Tb_Proveedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_Ubigeo_Tb_Vendedor" Association="Self.FK_Tb_Ubigeo_Tb_Vendedor">
+      <End Role="Tb_Vendedor" EntitySet="Tb_Vendedor" />
+      <End Role="Tb_Ubigeo" EntitySet="Tb_Ubigeo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,14 @@
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_ADO\bin\Debug\ProyVentas_ADO.dll
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_ADO\bin\Debug\ProyVentas_ADO.pdb
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_ADO\bin\Debug\ProyVentas_BE.dll
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_ADO\bin\Debug\ProyVentas_BE.pdb
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_ADO\obj\Debug\ProyVentas_ADO.csproj.AssemblyReference.cache
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_ADO\obj\Debug\ProyVentas_ADO.csproj.CoreCompileInputs.cache
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_ADO\obj\Debug\ProyVentas_ADO.csproj.CopyComplete
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_ADO\obj\Debug\ProyVentas_ADO.dll
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_ADO\obj\Debug\ProyVentas_ADO.pdb
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_ADO\bin\Debug\ProyVentas_ADO.dll.config
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_ADO\bin\Debug\EntityFramework.dll
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_ADO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_ADO\bin\Debug\EntityFramework.xml
+C:\Users\DAVIDWILD\Desktop\ISIL-IV\DA-LEON\Clases\session_semana11\DemoVentas_3CapasEF\ProyVentas_ADO\bin\Debug\EntityFramework.SqlServer.xml

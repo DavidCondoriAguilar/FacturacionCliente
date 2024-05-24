@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VentasLeonModelStoreContainer" CdmEntityContainer="VentasLeonEntities">
+    <EntitySetMapping Name="Tb_Abastecimiento">
+      <EntityTypeMapping TypeName="VentasLeonModel.Tb_Abastecimiento">
+        <MappingFragment StoreEntitySet="Tb_Abastecimiento">
+          <ScalarProperty Name="Cod_prv" ColumnName="Cod_prv" />
+          <ScalarProperty Name="Cod_pro" ColumnName="Cod_pro" />
+          <ScalarProperty Name="Pre_Aba" ColumnName="Pre_Aba" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Categoria">
+      <EntityTypeMapping TypeName="VentasLeonModel.Tb_Categoria">
+        <MappingFragment StoreEntitySet="Tb_Categoria">
+          <ScalarProperty Name="Id_Cat" ColumnName="Id_Cat" />
+          <ScalarProperty Name="Des_Cat" ColumnName="Des_Cat" />
+          <ScalarProperty Name="Foto_Cat" ColumnName="Foto_Cat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Cliente">
+      <EntityTypeMapping TypeName="VentasLeonModel.Tb_Cliente">
+        <MappingFragment StoreEntitySet="Tb_Cliente">
+          <ScalarProperty Name="Cod_cli" ColumnName="Cod_cli" />
+          <ScalarProperty Name="Raz_soc_cli" ColumnName="Raz_soc_cli" />
+          <ScalarProperty Name="Dir_cli" ColumnName="Dir_cli" />
+          <ScalarProperty Name="Tel_cli" ColumnName="Tel_cli" />
+          <ScalarProperty Name="Ruc_cli" ColumnName="Ruc_cli" />
+          <ScalarProperty Name="Id_Ubigeo" ColumnName="Id_Ubigeo" />
+          <ScalarProperty Name="Tip_cli" ColumnName="Tip_cli" />
+          <ScalarProperty Name="Contacto" ColumnName="Contacto" />
+          <ScalarProperty Name="Fec_reg" ColumnName="Fec_reg" />
+          <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+          <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+          <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+          <ScalarProperty Name="Est_cli" ColumnName="Est_cli" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Detalle_Compra">
+      <EntityTypeMapping TypeName="VentasLeonModel.Tb_Detalle_Compra">
+        <MappingFragment StoreEntitySet="Tb_Detalle_Compra">
+          <ScalarProperty Name="Num_oco" ColumnName="Num_oco" />
+          <ScalarProperty Name="Cod_pro" ColumnName="Cod_pro" />
+          <ScalarProperty Name="Can_ped" ColumnName="Can_ped" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Detalle_Factura">
+      <EntityTypeMapping TypeName="VentasLeonModel.Tb_Detalle_Factura">
+        <MappingFragment StoreEntitySet="Tb_Detalle_Factura">
+          <ScalarProperty Name="Num_fac" ColumnName="Num_fac" />
+          <ScalarProperty Name="Cod_pro" ColumnName="Cod_pro" />
+          <ScalarProperty Name="Can_ven" ColumnName="Can_ven" />
+          <ScalarProperty Name="Pre_ven" ColumnName="Pre_ven" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Factura">
+      <EntityTypeMapping TypeName="VentasLeonModel.Tb_Factura">
+        <MappingFragment StoreEntitySet="Tb_Factura">
+          <ScalarProperty Name="Num_fac" ColumnName="Num_fac" />
+          <ScalarProperty Name="Fec_fac" ColumnName="Fec_fac" />
+          <ScalarProperty Name="Cod_cli" ColumnName="Cod_cli" />
+          <ScalarProperty Name="Fec_can" ColumnName="Fec_can" />
+          <ScalarProperty Name="Est_fac" ColumnName="Est_fac" />
+          <ScalarProperty Name="Cod_ven" ColumnName="Cod_ven" />
+          <ScalarProperty Name="Por_Igv" ColumnName="Por_Igv" />
+          <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+          <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+          <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+          <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Orden_Compra">
+      <EntityTypeMapping TypeName="VentasLeonModel.Tb_Orden_Compra">
+        <MappingFragment StoreEntitySet="Tb_Orden_Compra">
+          <ScalarProperty Name="Num_oco" ColumnName="Num_oco" />
+          <ScalarProperty Name="Fec_oco" ColumnName="Fec_oco" />
+          <ScalarProperty Name="Cod_prv" ColumnName="Cod_prv" />
+          <ScalarProperty Name="Fec_ate" ColumnName="Fec_ate" />
+          <ScalarProperty Name="Est_oco" ColumnName="Est_oco" />
+          <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+          <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+          <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+          <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Producto">
+      <EntityTypeMapping TypeName="VentasLeonModel.Tb_Producto">
+        <MappingFragment StoreEntitySet="Tb_Producto">
+          <ScalarProperty Name="Cod_pro" ColumnName="Cod_pro" />
+          <ScalarProperty Name="Des_pro" ColumnName="Des_pro" />
+          <ScalarProperty Name="Pre_pro" ColumnName="Pre_pro" />
+          <ScalarProperty Name="Stk_act" ColumnName="Stk_act" />
+          <ScalarProperty Name="Stk_min" ColumnName="Stk_min" />
+          <ScalarProperty Name="Id_UM" ColumnName="Id_UM" />
+          <ScalarProperty Name="Id_Cat" ColumnName="Id_Cat" />
+          <ScalarProperty Name="Importado" ColumnName="Importado" />
+          <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+          <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+          <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+          <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+          <ScalarProperty Name="Est_pro" ColumnName="Est_pro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Proveedor">
+      <EntityTypeMapping TypeName="VentasLeonModel.Tb_Proveedor">
+        <MappingFragment StoreEntitySet="Tb_Proveedor">
+          <ScalarProperty Name="Cod_prv" ColumnName="Cod_prv" />
+          <ScalarProperty Name="Raz_soc_prv" ColumnName="Raz_soc_prv" />
+          <ScalarProperty Name="Dir_prv" ColumnName="Dir_prv" />
+          <ScalarProperty Name="Tel_prv" ColumnName="Tel_prv" />
+          <ScalarProperty Name="Ruc_Prv" ColumnName="Ruc_Prv" />
+          <ScalarProperty Name="Rep_ven" ColumnName="Rep_ven" />
+          <ScalarProperty Name="Id_Ubigeo" ColumnName="Id_Ubigeo" />
+          <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+          <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+          <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+          <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+          <ScalarProperty Name="Est_prv" ColumnName="Est_prv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_RepositorioDocumentos">
+      <EntityTypeMapping TypeName="VentasLeonModel.Tb_RepositorioDocumentos">
+        <MappingFragment StoreEntitySet="Tb_RepositorioDocumentos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ruta" ColumnName="Ruta" />
+          <ScalarProperty Name="FecRegistro" ColumnName="FecRegistro" />
+          <ScalarProperty Name="UsuRegistro" ColumnName="UsuRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Ubigeo">
+      <EntityTypeMapping TypeName="VentasLeonModel.Tb_Ubigeo">
+        <MappingFragment StoreEntitySet="Tb_Ubigeo">
+          <ScalarProperty Name="Id_Ubigeo" ColumnName="Id_Ubigeo" />
+          <ScalarProperty Name="IdDepa" ColumnName="IdDepa" />
+          <ScalarProperty Name="IdProv" ColumnName="IdProv" />
+          <ScalarProperty Name="IdDist" ColumnName="IdDist" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+          <ScalarProperty Name="Cod_Ven" ColumnName="Cod_Ven" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_UnidadMedida">
+      <EntityTypeMapping TypeName="VentasLeonModel.Tb_UnidadMedida">
+        <MappingFragment StoreEntitySet="Tb_UnidadMedida">
+          <ScalarProperty Name="Id_UM" ColumnName="Id_UM" />
+          <ScalarProperty Name="Des_UM" ColumnName="Des_UM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Usuario">
+      <EntityTypeMapping TypeName="VentasLeonModel.Tb_Usuario">
+        <MappingFragment StoreEntitySet="Tb_Usuario">
+          <ScalarProperty Name="Login_Usuario" ColumnName="Login_Usuario" />
+          <ScalarProperty Name="Pass_Usuario" ColumnName="Pass_Usuario" />
+          <ScalarProperty Name="Niv_Usuario" ColumnName="Niv_Usuario" />
+          <ScalarProperty Name="Est_Usuario" ColumnName="Est_Usuario" />
+          <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+          <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Vendedor">
+      <EntityTypeMapping TypeName="VentasLeonModel.Tb_Vendedor">
+        <MappingFragment StoreEntitySet="Tb_Vendedor">
+          <ScalarProperty Name="Cod_ven" ColumnName="Cod_ven" />
+          <ScalarProperty Name="Nom_ven" ColumnName="Nom_ven" />
+          <ScalarProperty Name="Ape_ven" ColumnName="Ape_ven" />
+          <ScalarProperty Name="Sue_ven" ColumnName="Sue_ven" />
+          <ScalarProperty Name="Fec_ing" ColumnName="Fec_ing" />
+          <ScalarProperty Name="Tip_ven" ColumnName="Tip_ven" />
+          <ScalarProperty Name="Dni_ven" ColumnName="Dni_ven" />
+          <ScalarProperty Name="Email_ven" ColumnName="Email_ven" />
+          <ScalarProperty Name="Cod_Supervisor" ColumnName="Cod_Supervisor" />
+          <ScalarProperty Name="Fec_Registro" ColumnName="Fec_Registro" />
+          <ScalarProperty Name="Usu_Registro" ColumnName="Usu_Registro" />
+          <ScalarProperty Name="Fec_Ult_Mod" ColumnName="Fec_Ult_Mod" />
+          <ScalarProperty Name="Usu_Ult_Mod" ColumnName="Usu_Ult_Mod" />
+          <ScalarProperty Name="Est_ven" ColumnName="Est_ven" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_DeudaCliente" FunctionName="VentasLeonModel.Store.usp_DeudaCliente" />
+    <FunctionImportMapping FunctionImportName="usp_ListarFacturasVendedorFechas" FunctionName="VentasLeonModel.Store.usp_ListarFacturasVendedorFechas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="VentasLeonModel.usp_ListarFacturasVendedorFechas_Result">
+          <ScalarProperty Name="num_fac" ColumnName="num_fac" />
+          <ScalarProperty Name="fec_fac" ColumnName="fec_fac" />
+          <ScalarProperty Name="fec_can" ColumnName="fec_can" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="Cod_cli" ColumnName="Cod_cli" />
+          <ScalarProperty Name="Ruc_cli" ColumnName="Ruc_cli" />
+          <ScalarProperty Name="Raz_soc_cli" ColumnName="Raz_soc_cli" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ListarNombresVendedor" FunctionName="VentasLeonModel.Store.usp_ListarNombresVendedor">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="VentasLeonModel.usp_ListarNombresVendedor_Result">
+          <ScalarProperty Name="COD_VEN" ColumnName="COD_VEN" />
+          <ScalarProperty Name="NOMBRES" ColumnName="NOMBRES" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

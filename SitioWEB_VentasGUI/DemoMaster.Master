@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DemoMaster.master.cs" Inherits="DemoWEB_Sem10.DemoMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <title> Demos WEB -ISIL Aprende haciendo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <%--Referencia a la hoja de estilos  de la carpeta CSS--%>
+    <link href="CSS/DemoCSS.css" rel="stylesheet" type="text/css" />
+    
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>    
+     <%--Contenedor de cabecera (uso opcional)--%>
+    <asp:ContentPlaceHolder id="Cabecera" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background:#f3f4ee;">
+    <form id="form1" runat="server">
+        <%--Para facilitar el empleo de AJAX dentro de los formularios hijos del Masterpage--%>
+    <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="True"></asp:ScriptManager>
+    <div>
+        <%--Contenedor principal para la personalizacion de los formularios hijos del MasterPage--%>
+        <asp:ContentPlaceHolder id="Principal" runat="server">
+         
+        </asp:ContentPlaceHolder>
+
+   
+
+    </div>
+    </form>
+    
+
+   
+      
+</body>
+</html>
